@@ -7,16 +7,14 @@
             <h1><a href="/">Blog</a></h1>
         </div>
  
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </div>
- 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">Mon second post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget.</p>
+        <div>  
+        {% for billet in billets %}
+            <div>
+                <p>published: {{ billet.published_date }}</p>
+                <h2><a href="">{{ billet.title }}</a></h2>
+                <p>{{ billet.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
         </div>
     </body>
 </html>
