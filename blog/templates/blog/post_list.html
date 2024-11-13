@@ -1,38 +1,13 @@
-{% load static %}
-<html>
+{% extends 'blog/base.html' %}
 
-<head>
-    <title>Django Girls Blog</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-</head>
-
-<body>
-    <header class="page-header">
-        <div class="container">
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
-    </header>
-
-    <div>
-        <main class="container">
-            <div class="row">
-                <div class="col">
-                    {% for billet in billets %}
-                        <article class="post">
-                            <time class="date">
-                                {{ billet.published_date }}
-                            </time>
-                            <h2><a href="">{{ billet.title }}</a></h2>
-                            <p>{{ billet.text|linebreaksbr }}</p>
-                        </article>
-                    {% endfor %}
-                </div>
+{% block content %}
+    {% for billet in billets %}
+        <div class="billet">
+            <div class="date">
+                {{ billet.published_date }}
             </div>
-        </main>
-    </div>
-</body>
-
-</html>
+            <h2><a href="">{{ billet.title }}</a></h2>
+            <p>{{ billet.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
