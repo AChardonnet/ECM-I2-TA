@@ -1,1 +1,39 @@
 {% extends 'playground/base.html' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+<h2>Accueil</h2>
+<div>
+    <h3>Pokémons</h3>
+    <div class="row">
+        {% for character in characters %}
+        <a href="{% url 'character_detail' id_character=character.id_character %}">
+            <div class="card col-md-2">
+                <img src="{{character.photo}}" class="card-img-top img-fluid"
+                    alt="portrait de {{character.id_character}}" style="max-width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">{{character.id_character}}</h5>
+                    <p class="card-text">Type : {{character.type}} <br />
+                        Etat : {{character.etat}} <br />
+                        Lieu : {{character.lieu.id_equip}} <br /></p>
+        </a>
+    </div>
+</div>
+{% endfor %}
+</div>
+
+<div class="row">
+    <h3>Équipements</h3>
+    {% for equipment in equipments %}
+    <div class="card col-md-2">
+        <img src="{{equipment.photo}}" class="card-img-top img-fluid" alt="photo de {{equipment.id_character}}"
+            style="max-width: 100%;">
+        <div class="card-body">
+            <h5 class="card-title">{{equipment.id_equip}}</h5>
+            <p class="card-text">Disponibilité : {{equipment.disponibilite}} </p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

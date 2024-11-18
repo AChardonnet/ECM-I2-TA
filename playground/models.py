@@ -5,6 +5,8 @@ class Equipement(models.Model):
     id_equip = models.CharField(max_length=100, primary_key=True)
     disponibilite = models.CharField(max_length=20)
     photo = models.CharField(max_length=200)
+    etat_prerequis = models.CharField(max_length=200)
+    etat_suivant = models.CharField(max_length=200)
 
     def __str__(self):
         return self.id_equip

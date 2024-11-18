@@ -1,0 +1,28 @@
+{% extends 'playground/base.html' %}
+
+{% block title %}{{character.id_character}}{% endblock %}
+
+{% block content %}
+<div>
+    <h2>
+        {{character.id_character}}
+    </h2>
+    <img src="{{character.photo}}" class="img-fluid" alt="portrait de {{character.id_character}}"
+        style="max-width: 100%;">
+    <p>Type : {{character.type}} <br />
+        Etat : {{character.etat}} <br />
+        Lieu : {{character.lieu.id_equip}} <br />
+        Equipe : {{character.team}} <br />
+    </p>
+    {% if message != ''%}
+        <div class="alert alert-danger" role="alert">
+            {{message}}
+        </div>
+    {% endif %}
+    <form method="POST" class="post-form">{% csrf_token %}
+        <b> Changer : </b> {{ form.as_ul }}
+        <button type="submit" class="btn btn-success">OK</button>
+        <a href="{% url 'home' %}">Back</a>
+    </form>
+</div>
+{% endblock %}
