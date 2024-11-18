@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "blog.apps.BlogConfig",
     "playground.apps.PlaygroundConfig",
+    "home.apps.HomeConfig",
 ]
 
 
