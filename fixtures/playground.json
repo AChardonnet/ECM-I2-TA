@@ -1,0 +1,97 @@
+[
+{
+    "model": "playground.equipement",
+    "pk": "Ar\u00e8ne",
+    "fields": {
+        "disponibilite": "libre",
+        "photo": "https://www.media.pokekalos.fr/img/jeux/pev/arenes/arene1.png",
+        "etat_prerequis": "s'ennuie",
+        "etat_suivant": "KO"
+    }
+},
+{
+    "model": "playground.equipement",
+    "pk": "Boite du PC",
+    "fields": {
+        "disponibilite": "libre",
+        "photo": "https://www.pokepedia.fr/images/d/d8/PC_d%27Annette_Bo%C3%AEtes_3gen.png",
+        "etat_prerequis": "fatigu\u00e9",
+        "etat_suivant": "s'ennuie"
+    }
+},
+{
+    "model": "playground.equipement",
+    "pk": "Centre Pok\u00e9mon",
+    "fields": {
+        "disponibilite": "libre",
+        "photo": "https://www.pokebip.com/pages/general/images/centre-pokemon-xy-int.png",
+        "etat_prerequis": "KO",
+        "etat_suivant": "excit\u00e9"
+    }
+},
+{
+    "model": "playground.equipement",
+    "pk": "Prairie",
+    "fields": {
+        "disponibilite": "libre",
+        "photo": "https://www.media.pokekalos.fr/img/jeux/pokemondmswitch/zones/big/plaines-sauvages.jpg",
+        "etat_prerequis": "excit\u00e9",
+        "etat_suivant": "fatigu\u00e9"
+    }
+},
+{
+    "model": "playground.character",
+    "pk": "Brindibou",
+    "fields": {
+        "etat": "s'ennuie",
+        "type": "Plante, Vol",
+        "team": "Gentils",
+        "photo": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/722.png",
+        "lieu": "Boite du PC"
+    }
+},
+{
+    "model": "playground.character",
+    "pk": "Emolga",
+    "fields": {
+        "etat": "s'ennuie",
+        "type": "\u00c9lectrik, Vol",
+        "team": "Gentils",
+        "photo": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/587.png",
+        "lieu": "Boite du PC"
+    }
+},
+{
+    "model": "playground.character",
+    "pk": "Evoli",
+    "fields": {
+        "etat": "s'ennuie",
+        "type": "Normal",
+        "team": "Gentils",
+        "photo": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/133.png",
+        "lieu": "Boite du PC"
+    }
+},
+{
+    "model": "playground.character",
+    "pk": "Jirachi",
+    "fields": {
+        "etat": "s'ennuie",
+        "type": "Acier, Psy",
+        "team": "Gentils",
+        "photo": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/385.png",
+        "lieu": "Boite du PC"
+    }
+},
+{
+    "model": "playground.character",
+    "pk": "Poussifeu",
+    "fields": {
+        "etat": "s'ennuie",
+        "type": "Feu",
+        "team": "Gentils",
+        "photo": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/255.png",
+        "lieu": "Boite du PC"
+    }
+}
+]
